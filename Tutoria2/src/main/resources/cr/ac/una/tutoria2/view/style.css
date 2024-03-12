@@ -5,3 +5,89 @@
 .mainFxmlClass {
 
 }
+
+.backgroundLogin{
+    -fx-background-image: url("../resources/background/background2.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.Label{
+    -fx-font-size: 20;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.imgEffect:hover{
+     -fx-effect:dropshadow(gaussian, rgba(0, 153, 255, 1), 10, 0.5, 0.0, 0.0);
+    -fx-cursor: hand;
+}
+
+.vbox-inputs{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-min-width: 395;
+    -fx-max-width: 1000;
+    -fx-alignment: CENTER;
+    -fx-spacing: 10;
+    -fx-padding: 15;
+}
+
+.text-field-login{
+    -fx-border-width: 1 2 1 2;
+    -fx-border-color: #000000;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-pref-height: 50;
+    -fx-font-size: 18;
+}
+
+.text-field-login:focused{
+    -fx-background-insets: 0;
+    -fx-effect:dropshadow(gaussian, rgba(0, 153, 255, 1), 10, 0.5, 0.0, 0.0);
+}
+#btnCancelar, #btnIngresar {
+    -fx-background-radius: 8px;
+    -fx-pref-width: 150;
+    -fx-pref-height: 50;
+    -fx-font-size: 18;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+#btnCancelar{
+    -fx-background-color: #ff0000;
+}
+
+#btnIngresar{
+    -fx-background-color: #009900;
+}
+#btnCancelar:hover{
+    -fx-background-color: #990000;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 10, 0.5, 0.0, 0.0);
+}
+
+#btnIngresar:hover{
+    -fx-background-color: #006600;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 10, 0.5, 0.0, 0.0);
+}
+#btnCancelar:pressed, #btnIngresar:pressed{
+    -fx-border-radius: 8px;
+    -fx-border-color: #FFFFFF;
+}
+
+.btnLink{
+    -fx-background-color: none;
+    -fx-text-fill: #0033ff;
+    -fx-font-size: 18;
+    -fx-cursor: hand;
+}
+
+.btnLink:hover{
+    -fx-underline: true;
+}
+.btnLink:pressed{
+    -fx-text-fill: #666666;
+}

@@ -1,14 +1,14 @@
 package cr.ac.una.tutoria2.controller;
 
-import cr.ac.una.tutoria2.util.Mensaje;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -21,11 +21,18 @@ public class LogInViewController extends Controller implements Initializable {
     @FXML
     private AnchorPane root;
     @FXML
-    private TextField txtUsurio;
+    private ImageView imgUserIcon;
     @FXML
-    private TextField txtContrasena;
+    private TextField txtUsuario;
+    @FXML
+    private PasswordField txtContrasena;
+    @FXML
+    private Button btnCancelar;
     @FXML
     private Button btnIngresar;
+    @FXML
+    private Button btnAcercaDe;
+
 
     /**
      * Initializes the controller class.
@@ -36,14 +43,23 @@ public class LogInViewController extends Controller implements Initializable {
     }    
 
     @Override
-    public void initialize() {
+    public void initialize() { 
+    
+    }
+
+    @FXML
+    private void onActionBtnCancelar(ActionEvent event) {
+        
     }
 
     @FXML
     private void onActionBtnIngresar(ActionEvent event) {
-        if (txtUsurio.getText().isBlank()){
-            new Mensaje().show(Alert.AlertType.INFORMATION, "Inicio Sesion", "campo de texto usuario");
-        }
+        
+    }
+
+    @FXML
+    private void onActionBtnAcercaDe(ActionEvent event) {
+        
     }
     
 }
