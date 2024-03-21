@@ -142,6 +142,10 @@ public class Usuario {
         this.edad = anios;
          this.edadCompleta = anios + " años, " + meses + " meses y " + dias + " días.";
     }
+    
+    public String getNombreCompleto(){
+        return "Nombre: " + nombre + " " + primerApellido + " " + segundoApellido + ".";
+    }
 
     public enum Sexo {
         FEMENINO,

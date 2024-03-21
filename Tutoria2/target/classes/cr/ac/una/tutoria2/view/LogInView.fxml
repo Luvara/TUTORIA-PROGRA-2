@@ -3,6 +3,9 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,34 +13,55 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" fx:id="root" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.tutoria2.controller.LogInViewController">
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="600.0" prefWidth="800.0" styleClass="backgroundLogin" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.tutoria2.controller.LogInViewController">
     <stylesheets>
         <URL value="@style.css" />
     </stylesheets>
    <children>
-      <VBox alignment="CENTER" layoutX="370.0" layoutY="163.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+            <Label styleClass="Label" text="Bienvenido!!" />
+            <ImageView fx:id="imgUserIcon" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="imgEffect">
                <image>
                   <Image url="@../resources/icons/userIconOp.png" />
                </image>
             </ImageView>
-            <HBox alignment="CENTER" spacing="10.0">
+            <VBox alignment="CENTER" prefWidth="100.0" styleClass="vbox-inputs">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../resources/icons/userIcon.png" />
-                     </image>
-                  </ImageView>
-                  <TextField fx:id="txtUsurio" promptText="Usuario" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/icons/userIcon.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtUsuario" promptText="Usuario" styleClass="text-field-login" text="luvara" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/icons/passwordIcon.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="txtContrasena" promptText="Contraseña" styleClass="text-field-login" text="qwerty" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="56.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onActionBtnCancelar" text="Cancelar" />
+                        <Button fx:id="btnIngresar" layoutX="384.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionBtnIngresar" text="Ingresar" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="btnAcercaDe" mnemonicParsing="false" onAction="#onActionBtnAcercaDe" styleClass="btnLink" text="Acerca de..." />
                </children>
-            </HBox>
-            <TextField fx:id="txtContrasena" layoutX="10.0" layoutY="373.0" promptText="Contraseña" />
-            <Button fx:id="btnIngresar" mnemonicParsing="false" onAction="#onActionBtnIngresar" text="Ingresar" />
+               <VBox.margin>
+                  <Insets left="150.0" right="150.0" />
+               </VBox.margin>
+            </VBox>
          </children>
-         <padding>
-            <Insets left="200.0" right="200.0" />
-         </padding>
       </VBox>
    </children>
 </AnchorPane>

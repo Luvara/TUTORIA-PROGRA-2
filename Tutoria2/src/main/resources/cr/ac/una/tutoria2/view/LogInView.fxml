@@ -35,7 +35,7 @@
                               <Image url="@../resources/icons/userIcon.png" />
                            </image>
                         </ImageView>
-                        <TextField fx:id="txtUsuario" promptText="Usuario" styleClass="text-field-login" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="txtUsuario" promptText="Usuario" styleClass="text-field-login" text="luvara" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefWidth="200.0">
@@ -45,13 +45,13 @@
                               <Image url="@../resources/icons/passwordIcon.png" />
                            </image>
                         </ImageView>
-                        <PasswordField fx:id="txtContrasena" promptText="Contraseña" styleClass="text-field-login" HBox.hgrow="ALWAYS" />
+                        <PasswordField fx:id="txtContrasena" promptText="Contraseña" styleClass="text-field-login" text="qwerty" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="56.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onActionBtnCancelar" text="Cancelar" />
-                        <Button fx:id="btnIngresar" layoutX="384.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionBtnIngresar" text="Ingresar" />
+                        <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onActionBtnCancelar" styleClass="btnCancelar" text="Cancelar" />
+                        <Button fx:id="btnIngresar" layoutX="384.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionBtnIngresar" styleClass="btnIngresar" text="Ingresar" />
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" />
