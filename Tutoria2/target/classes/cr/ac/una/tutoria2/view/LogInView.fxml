@@ -24,8 +24,7 @@
             <ImageView fx:id="imgUserIcon" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="imgEffect">
                <image>
                   <Image url="@../resources/icons/userIconOp.png" />
-               </image>
-            </ImageView>
+               </image></ImageView>
             <VBox alignment="CENTER" prefWidth="100.0" styleClass="vbox-inputs">
                <children>
                   <HBox alignment="CENTER" prefWidth="200.0">
@@ -50,8 +49,8 @@
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="56.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onActionBtnCancelar" text="Cancelar" />
-                        <Button fx:id="btnIngresar" layoutX="384.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionBtnIngresar" text="Ingresar" />
+                        <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onActionBtnCancelar" styleClass="btnCancelar" text="Cancelar" />
+                        <Button fx:id="btnIngresar" layoutX="384.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionBtnIngresar" styleClass="btnIngresar" text="Ingresar" />
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" />

@@ -1,13 +1,16 @@
-/*
- * Empty Stylesheet file.
- */
-
 .mainFxmlClass {
 
 }
 
 .backgroundLogin{
     -fx-background-image: url("../resources/background/background2.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.fondo-menu{
+    -fx-background-image: url("../resources/background/background1.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
@@ -49,7 +52,7 @@
     -fx-background-insets: 0;
     -fx-effect:dropshadow(gaussian, rgba(0, 153, 255, 1), 10, 0.5, 0.0, 0.0);
 }
-#btnCancelar, #btnIngresar {
+.btnCancelar, .btnIngresar {
     -fx-background-radius: 8px;
     -fx-pref-width: 150;
     -fx-pref-height: 50;
@@ -59,23 +62,23 @@
     -fx-cursor: hand;
 }
 
-#btnCancelar{
+.btnCancelar{
     -fx-background-color: #ff0000;
 }
 
-#btnIngresar{
+.btnIngresar{
     -fx-background-color: #009900;
 }
-#btnCancelar:hover{
+.btnCancelar:hover{
     -fx-background-color: #990000;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 10, 0.5, 0.0, 0.0);
 }
 
-#btnIngresar:hover{
+.btnIngresar:hover{
     -fx-background-color: #006600;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 10, 0.5, 0.0, 0.0);
 }
-#btnCancelar:pressed, #btnIngresar:pressed{
+.btnCancelar:pressed, .btnIngresar:pressed{
     -fx-border-radius: 8px;
     -fx-border-color: #FFFFFF;
 }
@@ -92,4 +95,44 @@
 }
 .btnLink:pressed{
     -fx-text-fill: #666666;
+}
+
+.vbox-principal-view{
+    -fx-min-width: 250;
+    -fx-pref-width: 250;
+    -fx-alignment: CENTER;
+    -fx-spacing: 10;
+    -fx-padding: 15;
+}
+
+.btnMenu, .btnMenuSalir, .btnMantenimientos{
+    -fx-pref-width: 150;
+    -fx-pref-height: 50;
+    -fx-max-width: 1000;
+    -fx-font-size: 15;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.btnMenu:hover{
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+}
+
+.btnMantenimientos:hover{
+    -fx-background-color: #666666;
+    -fx-text-fill: #FFFFFF;
+}
+
+.btnMenuSalir:hover{
+    -fx-background-color: #cc0000;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18;
+}
+
+.lblMantUsuarios{
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
 }

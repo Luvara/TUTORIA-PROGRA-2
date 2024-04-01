@@ -1,4 +1,3 @@
-
 package cr.ac.una.tutoria2.controller;
 
 import cr.ac.una.tutoria2.model.Usuario;
@@ -10,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
@@ -26,8 +26,17 @@ public class PrincipalViewController extends Controller implements Initializable
     private Button btnCerrarSesion;
     @FXML
     private Button btnSalir;
-    
+    @FXML
+    private ImageView imgIconUser;
+    @FXML
+    private Button btnMantGenerales;
+    @FXML
+    private Button btnReportes;
+    @FXML
+    private Label lblAppName;
+
     Usuario user;
+    
 
     /**
      * Initializes the controller class.
@@ -36,12 +45,13 @@ public class PrincipalViewController extends Controller implements Initializable
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         user = (Usuario) AppContext.getInstance().get("USUARIO");
-        
+
         lblUserName.setText(user.getNombreCompleto());
-    }    
+    }
 
     @Override
-    public void initialize() {}
+    public void initialize() {
+    }
 
     @FXML
     private void onActionBtnMantUsuarios(ActionEvent event) {
@@ -54,5 +64,13 @@ public class PrincipalViewController extends Controller implements Initializable
     @FXML
     private void onActionBtnSalir(ActionEvent event) {
     }
-    
+
+    @FXML
+    private void onActionBtnMantGenerales(ActionEvent event) {
+    }
+
+    @FXML
+    private void onActionBtnReportes(ActionEvent event) {
+    }
+
 }
