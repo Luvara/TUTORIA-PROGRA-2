@@ -47,6 +47,8 @@ public class PrincipalViewController extends Controller implements Initializable
         user = (Usuario) AppContext.getInstance().get("USUARIO");
 
         lblUserName.setText(user.getNombreCompleto());
+        
+        isAdmin();
     }
 
     @Override
@@ -71,6 +73,13 @@ public class PrincipalViewController extends Controller implements Initializable
 
     @FXML
     private void onActionBtnReportes(ActionEvent event) {
+    }
+    
+    private void isAdmin(){
+        if (!user.getIsAdmin()){
+            btnMantGenerales.setVisible(false);
+            btnReportes.setDisable(true);
+        }
     }
 
 }

@@ -21,7 +21,7 @@ public class Usuario {
     private EnumEstCivil estadoCivil;
     private String usuario;
     private String contrasena;
-    //private Boolean isAdmin;
+    private Boolean isAdmin;
     private Image fotoUsuario;
 
     public Usuario() {
@@ -31,7 +31,7 @@ public class Usuario {
             String segundoApellido, String cedula, 
             LocalDate fechaNacimiento, Sexo sexo, 
             EnumEstCivil estadoCivil, String usuario, 
-            String contrasena, /*Boolean isAdmin,*/ Image fotoUsuario) {
+            String contrasena, Boolean isAdmin, Image fotoUsuario) {
         this.nombre = nombre;
         this.primerApellido = primerApellido;
         this.segundoApellido = segundoApellido;
@@ -42,7 +42,7 @@ public class Usuario {
         this.usuario = usuario;
         this.contrasena = contrasena;
         this.fotoUsuario = fotoUsuario;
-        //this.isAdmin = isAdmin;
+        this.isAdmin = isAdmin;
         calcularEdad();
     }
 
@@ -129,6 +129,16 @@ public class Usuario {
     public Integer getEdad() {
         return edad;
     }
+
+    public Boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
+    
+    
 
     public String getEdadCompleta() {
         return edadCompleta;
