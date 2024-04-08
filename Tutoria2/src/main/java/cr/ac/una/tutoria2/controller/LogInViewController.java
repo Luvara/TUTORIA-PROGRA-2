@@ -88,6 +88,7 @@ public class LogInViewController extends Controller implements Initializable {
         } else {
             if (comprobarCredenciales(txtUsuario.getText(), txtContrasena.getText())) {
                 AppContext.getInstance().set("USUARIO", user);
+                //AppContext.getInstance().set("LISTAUSUARIOS", listaUsuarios);
                 AppContext.getInstance().set("APPICON", image);
                 FlowController.getInstance().goMain();
                 getStage().close();

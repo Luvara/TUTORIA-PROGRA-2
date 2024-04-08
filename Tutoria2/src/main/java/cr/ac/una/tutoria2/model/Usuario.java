@@ -146,7 +146,7 @@ public class Usuario {
 
     private void calcularEdad() {
         Period period = Period.between(fechaNacimiento, LocalDate.now());
-        
+         
         int anios = period.getYears();
         int meses = period.getMonths();
         int dias = period.getDays();
@@ -156,8 +156,15 @@ public class Usuario {
     }
     
     public String getNombreCompleto(){
-        return "Nombre: " + nombre + " " + primerApellido + " " + segundoApellido + ".";
+        return nombre + " " + primerApellido + " " + segundoApellido + ".";
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "nombre=" + nombre + ", primerApellido=" + primerApellido + ", segundoApellido=" + segundoApellido + ", cedula=" + cedula + ", fechaNacimiento=" + fechaNacimiento + ", edad=" + edad + ", edadCompleta=" + edadCompleta + ", sexo=" + sexo + ", estadoCivil=" + estadoCivil + ", usuario=" + usuario + ", contrasena=" + contrasena + ", isAdmin=" + isAdmin + ", fotoUsuario=" + fotoUsuario + '}';
+    }
+    
+    
 
     public enum Sexo {
         FEMENINO,

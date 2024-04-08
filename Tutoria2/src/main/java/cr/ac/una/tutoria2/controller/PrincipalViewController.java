@@ -3,7 +3,9 @@ package cr.ac.una.tutoria2.controller;
 import cr.ac.una.tutoria2.model.Usuario;
 import cr.ac.una.tutoria2.util.AppContext;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -36,7 +38,6 @@ public class PrincipalViewController extends Controller implements Initializable
     private Label lblAppName;
 
     Usuario user;
-    
 
     /**
      * Initializes the controller class.
@@ -46,8 +47,8 @@ public class PrincipalViewController extends Controller implements Initializable
         // TODO
         user = (Usuario) AppContext.getInstance().get("USUARIO");
 
-        lblUserName.setText(user.getNombreCompleto());
-        
+        lblUserName.setText("Bienvenido: " + user.getNombreCompleto());
+
         isAdmin();
     }
 
@@ -61,10 +62,14 @@ public class PrincipalViewController extends Controller implements Initializable
 
     @FXML
     private void onActionBtnCerrarSesion(ActionEvent event) {
+        //        FlowController.getInstance().goViewInWindow("logInView");
+        //        FlowController.getInstance().salir();
     }
 
     @FXML
     private void onActionBtnSalir(ActionEvent event) {
+        //        FlowController.getInstance().salir();
+
     }
 
     @FXML
@@ -74,12 +79,11 @@ public class PrincipalViewController extends Controller implements Initializable
     @FXML
     private void onActionBtnReportes(ActionEvent event) {
     }
-    
-    private void isAdmin(){
-        if (!user.getIsAdmin()){
+
+    private void isAdmin() {
+        if (!user.getIsAdmin()) {
             btnMantGenerales.setVisible(false);
             btnReportes.setDisable(true);
         }
     }
-
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="cr.ac.una.tutoria2.controller.MantenimientoGeneralesViewController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="271.0" layoutY="52.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <children>
+            <Label styleClass="lblMantUsuarios" text="Lista de Usuarios" />
+            <TableView fx:id="tbvListaUsuarios" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                  <TableColumn fx:id="tbcCedula" prefWidth="129.0" text="Cedula" />
+                <TableColumn fx:id="tbcNombre" prefWidth="201.0" text="Nombre" />
+                <TableColumn fx:id="tbcPriApellido" prefWidth="179.0" text="Primer Apellido" />
+                  <TableColumn fx:id="tbcSegApellifo" prefWidth="191.0" text="Segundo Apellido" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
