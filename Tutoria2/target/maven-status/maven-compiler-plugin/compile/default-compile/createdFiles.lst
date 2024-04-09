@@ -6,6 +6,7 @@ cr\ac\una\tutoria2\controller\LogInViewController.class
 cr\ac\una\tutoria2\App.class
 cr\ac\una\tutoria2\model\Usuario$EnumEstCivil.class
 cr\ac\una\tutoria2\controller\PrincipalViewController.class
+cr\ac\una\tutoria2\controller\ListaUsuariosViewController.class
 cr\ac\una\tutoria2\model\Usuario$Sexo.class
 cr\ac\una\tutoria2\util\FlowController.class
 cr\ac\una\tutoria2\util\AppContext.class
